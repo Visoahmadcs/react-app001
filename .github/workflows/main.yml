@@ -33,6 +33,6 @@ jobs:
     - name: Build React App
       run: yarn build
     - name: Intall Surge
-      run: surge ./build reactapp001.surge.sh ${{Secrets.SURGE_TOKEN}}
+      run: surge ./build reactapp001.surge.sh --token ${{Secrets.SURGE_TOKEN}}
       
      
