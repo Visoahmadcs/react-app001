@@ -32,7 +32,11 @@ jobs:
        
     - name: Build React App
       run: yarn build
-    - name: Intall Surge
+      
+    - name: Install Surge
+      run: npm install --global surge
+      
+    - name: Deploy surge
       run: surge ./build ahmadreactapp.surge.sh  --token ${{Secrets.SURGE_TOKEN}}
       
      
